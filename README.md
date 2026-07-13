@@ -1,4 +1,4 @@
-# 用Rust构建AI Agent (Building AI Agents with Rust)
+# 用 Rust 构建 AI Agent (Building AI Agents with Rust)
 
 Companion code for the Bilibili tutorial series **用Rust构建AI Agent** — building an AI agent in Rust, chapter by chapter.
 
