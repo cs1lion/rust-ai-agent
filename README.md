@@ -11,9 +11,6 @@ Each episode's code is tagged. Clone the repo and check out the tag for the epis
 
 每一期的代码都打了tag。克隆仓库后，切换到对应期数的tag即可：
 
-\`\`\`bash
-cd rust-ai-agent
-\`\`\`
 
 Replace `ep04` with the tag shown in the video description.
 
