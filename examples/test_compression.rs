@@ -1,6 +1,8 @@
 use ai_agent::{
-    agent::Agent, callback::search_compressor::SearchCompressorCallback, constant::GPT_4O_MINI_MODEL, tools::build_toolbox,
+    agent::Agent, callback::search_compressor::SearchCompressorCallback,
+    constant::GPT_4O_MINI_MODEL, tools::build_toolbox,
 };
+use uuid::Uuid;
 use std::sync::Arc;
 
 #[tokio::main]
@@ -20,7 +22,12 @@ async fn main() -> anyhow::Result<()> {
     .with_max_steps(5)
     .with_after_tool_callback(Arc::new(SearchCompressorCallback));
 
-    let result = agent.run("2026世界人工智能大会 WAIC 有什么亮点？").await?;
+    let result = agent
+        .run(
+            "2026世界人工智能大会 WAIC 有什么亮点？",
+            &Uuid::new_v4().to_string(),
+        )
+        .await?;
     println!("\n最终回答: {}", result.output);
 
     Ok(())
