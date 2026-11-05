@@ -24,6 +24,7 @@ pub struct Agent {
     pub instructions: Vec<String>,
     pub toolbox: Arc<ToolBox>,
     pub max_steps: usize,
+    pub max_tokens: u32,
     pub before_tool_callbacks: Vec<Arc<dyn BeforeToolCallback>>,
     pub after_tool_callbacks: Vec<Arc<dyn AfterToolCallback>>,
     pub before_llm_callbacks: Vec<Arc<dyn BeforeLlmCallback>>,
@@ -37,6 +38,7 @@ impl Agent {
             instructions,
             toolbox,
             max_steps: 10,
+            max_tokens: 2048,
             name: AGENT_NAME.to_owned(),
             before_tool_callbacks: Vec::new(),
             after_tool_callbacks: Vec::new(),
@@ -52,6 +54,11 @@ impl Agent {
 
     pub fn with_max_steps(mut self, max_steps: usize) -> Self {
         self.max_steps = max_steps;
+        self
+    }
+
+    pub fn with_max_tokens(mut self, max_tokens: u32) -> Self {
+        self.max_tokens = max_tokens;
         self
     }
 
