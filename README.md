@@ -46,3 +46,9 @@ cargo run --bin rust-ai-agent
 # 运行 GAIA Benchmark 评测流水线
 cargo run --bin gaia-eval
 ```
+
+## Key Engineering Enhancements
+- **Context Engineering Hooks**: `before_llm` sliding-window compression & `after_tool` vector chunk filtering.
+- **Podman Container Sandbox**: Persistent isolated execution environment for `execute_python` and `bash_tool`.
+- **MCP & Dynamic Skills**: Subprocess MCP tool auto-discovery and `SKILL.md` frontmatter injection.
+- **GAIA Benchmark Harness**: Automated multi-step evaluation pipeline and telemetry export.
