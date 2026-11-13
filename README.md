@@ -1,4 +1,5 @@
 # rust-ai-agent
+![Rust 2021](img.shields.io/badge/Rust-2021-blue) ![Sandbox Podman](img.shields.io/badge/Sandbox-Podman-blue) ![Benchmark GAIA](img.shields.io/badge/Benchmark-GAIA-blue)
 
 基于 Rust 构建的高性能、类型安全的 AI Agent 框架，实现 ReAct 循环、上下文工程、MCP 工具生态、Podman 沙箱隔离与 GAIA Benchmark 自动化评测。
 
